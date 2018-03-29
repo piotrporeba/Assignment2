@@ -1,8 +1,6 @@
 # Seafood Website assignment
-This is a 3rd year project on webframeworks
-"# Symfony-assignment" 
+This is a 3rd year project 
 
 First Commit
-"# Symfony-assignment" 
 "# Assignment2" 
-"# Assignment2" 
+
