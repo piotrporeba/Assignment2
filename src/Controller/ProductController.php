@@ -7,9 +7,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use App\Entity\Product;
 use App\Entity\Category;
-
-
-
+use Symfony\Component\HttpFoundation\Request;
 
 
 class ProductController extends Controller
@@ -45,6 +43,45 @@ class ProductController extends Controller
     }
 
     /**
+     * @Route("/product/new", name="product_new_form")
+     */
+    public function newFormAction() {
+        $argsArray = [
+            ];
+
+    $templateName = 'product/form';
+    return $this->render($templateName . '.html.twig', $argsArray);
+    }
+
+
+
+    /**
+     * @Route("/product/processNewForm", name="product_process_new_form")
+     */
+    public function processNewFormAction(Request $request) {
+
+        $title = $request->request->get('title');
+        $summmary = $request->request->get('summary');
+        $photo = $request->request->get('photo');
+        $description = $request->request->get('description');
+        $ingredients = $request->request->get('ingredients');
+        $price = $request->request->get('price');
+        $category = $request->request->get('cat');
+
+        return $this->createAction($title, $summmary, $photo, $description, $ingredients, $price, $category);
+
+    }
+
+
+
+    public function createActionFromForm($product) {
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($product);
+        $em->flush();
+        return $this->listAction($product->getId());
+    }
+
+    /**
      * @Route("/product/{id}", name="product_show")
      */
     public function showAction(Product $product){
@@ -75,6 +112,8 @@ class ProductController extends Controller
         return $this->render($template, $args);
 
     }
+
+
 
 
 }
