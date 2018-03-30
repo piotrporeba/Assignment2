@@ -33,14 +33,17 @@ class Product
     }
 
 
-
-
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
      */
     private $id;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $title;
 
     /**
      * @ORM\Column(type="string", length=100)
@@ -52,6 +55,22 @@ class Product
      * @ORM\Column(type="decimal", scale=2, nullable=true)
      */
     private $price;
+
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $summary;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $photo;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+    private $ingredients;
 
     /**
      * @return mixed
@@ -68,6 +87,24 @@ class Product
     {
         $this->id = $id;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getTitle()
+    {
+        return $this->title;
+    }
+
+    /**
+     * @param mixed $title
+     */
+    public function setTitle($title)
+    {
+        $this->title = $title;
+    }
+
+
 
     /**
      * @return mixed
@@ -99,6 +136,54 @@ class Product
     public function setPrice($price)
     {
         $this->price = $price;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSummary()
+    {
+        return $this->summary;
+    }
+
+    /**
+     * @param mixed $summary
+     */
+    public function setSummary($summary)
+    {
+        $this->summary = $summary;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+
+    /**
+     * @param mixed $photo
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getIngredients()
+    {
+        return $this->ingredients;
+    }
+
+    /**
+     * @param mixed $ingredients
+     */
+    public function setIngredients($ingredients)
+    {
+        $this->ingredients = $ingredients;
     }
 
 

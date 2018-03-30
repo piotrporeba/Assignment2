@@ -15,17 +15,21 @@ use App\Entity\Category;
 class ProductController extends Controller
 {
     /**
-     * @Route("/product/create/{description}/{price}", name="product_create")
+     * @Route("/product/create/{title}/{summary}/{photo}/{description}/{ingredients}/{price}/{cat}", name="product_create")
      */
-    public function createAction($description, $price)
+    public function createAction($title, $summary, $photo, $description, $ingredients, $price, $cat)
     {
         // creating new product
         $product = new Product();
+        $product ->setTitle($title);
+        $product ->setSummary($summary);
+        $product ->setPhoto($photo);
         $product -> setDescription($description);
+        $product ->setIngredients($ingredients);
         $product -> setPrice($price);
 
         $category = new Category();
-        $category->setName('Default'); // setting default as a cathegory name for all new products
+        $category->setName($cat); // setting default as a cathegory name for all new products
 
         $product->setCategory($category);
 

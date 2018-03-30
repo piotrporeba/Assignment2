@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <style>
+                @import '/css/table.css';
+            </style>
+        {% endblock %}
     </head>
     <body>
         {% block body %}{% endblock %}
