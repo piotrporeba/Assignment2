@@ -2,118 +2,103 @@
 
 namespace App\Controller;
 
+use App\Entity\Product;
+use App\Form\ProductType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Component\HttpFoundation\Response;
-use App\Entity\Product;
-use App\Entity\Category;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 
-
+/**
+ * @Route("/product", name="product_")
+ */
 class ProductController extends Controller
 {
     /**
-     * @Route("/product/create/{title}/{summary}/{photo}/{description}/{ingredients}/{price}/{cat}", name="product_create")
+     * @Route("/", name="index")
+     *
+     * @return Response
      */
-    public function createAction($title, $summary, $photo, $description, $ingredients, $price, $cat)
+    public function index()
     {
-        // creating new product
+        $products = $this->getDoctrine()
+            ->getRepository(Product::class)
+            ->findAll();
+
+        return $this->render('product/index.html.twig', ['products' => $products]);
+    }
+
+    /**
+     * @Route("/new", name="new")
+     * @Method({"GET", "POST"})
+     */
+    public function new(Request $request)
+    {
         $product = new Product();
-        $product ->setTitle($title);
-        $product ->setSummary($summary);
-        $product ->setPhoto($photo);
-        $product -> setDescription($description);
-        $product ->setIngredients($ingredients);
-        $product -> setPrice($price);
+        $form = $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
 
-        $category = new Category();
-        $category->setName($cat); // setting default as a cathegory name for all new products
+        if ($form->isSubmitted() && $form->isValid()) {
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($product);
+            $em->flush();
 
-        $product->setCategory($category);
+            return $this->redirectToRoute('product_edit', ['id' => $product->getId()]);
+        }
+
+        return $this->render('product/new.html.twig', [
+            'product' => $product,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/{id}", name="show")
+     * @Method("GET")
+     */
+    public function show(Product $product)
+    {
+        return $this->render('product/show.html.twig', [
+            'product' => $product,
+        ]);
+    }
+
+    /**
+     * @Route("/{id}/edit", name="edit")
+     * @Method({"GET", "POST"})
+     */
+    public function edit(Request $request, Product $product)
+    {
+        $form = $this->createForm(ProductType::class, $product);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+            $this->getDoctrine()->getManager()->flush();
+
+            return $this->redirectToRoute('product_edit', ['id' => $product->getId()]);
+        }
+
+        return $this->render('product/edit.html.twig', [
+            'product' => $product,
+            'form' => $form->createView(),
+        ]);
+    }
+
+    /**
+     * @Route("/{id}", name="delete")
+     * @Method("DELETE")
+     */
+    public function delete(Request $request, Product $product)
+    {
+        if (!$this->isCsrfTokenValid('delete'.$product->getId(), $request->request->get('_token'))) {
+            return $this->redirectToRoute('product_index');
+        }
 
         $em = $this->getDoctrine()->getManager();
-        $em->persist($product);
-        $em->persist($category);
+        $em->remove($product);
         $em->flush();
 
-
-        return $this->redirectToRoute('product_show', [
-            'id' => $product->getId()
-    ]);
+        return $this->redirectToRoute('product_index');
     }
-
-    /**
-     * @Route("/product/new", name="product_new_form")
-     */
-    public function newFormAction() {
-        $argsArray = [
-            ];
-
-    $templateName = 'product/form';
-    return $this->render($templateName . '.html.twig', $argsArray);
-    }
-
-
-
-    /**
-     * @Route("/product/processNewForm", name="product_process_new_form")
-     */
-    public function processNewFormAction(Request $request) {
-
-        $title = $request->request->get('title');
-        $summmary = $request->request->get('summary');
-        $photo = $request->request->get('photo');
-        $description = $request->request->get('description');
-        $ingredients = $request->request->get('ingredients');
-        $price = $request->request->get('price');
-        $category = $request->request->get('cat');
-
-        return $this->createAction($title, $summmary, $photo, $description, $ingredients, $price, $category);
-
-    }
-
-
-
-    public function createActionFromForm($product) {
-        $em = $this->getDoctrine()->getManager();
-        $em->persist($product);
-        $em->flush();
-        return $this->listAction($product->getId());
-    }
-
-    /**
-     * @Route("/product/{id}", name="product_show")
-     */
-    public function showAction(Product $product){
-
-
-        // were assuming that product is not null
-        $template ='product/show.html.twig';
-        $args = [
-            'product' =>$product
-        ];
-        return $this->render($template,$args);
-    }
-
-    /**
-     * @Route("/product", name="product_list")
-     */
-    public function listAction(){
-
-        $productRepository =$this->getDoctrine()->getRepository(Product::class);
-        $products = $productRepository->findAll();
-
-        $template ='product/list.html.twig';
-        $args =[
-
-            'products' => $products
-        ];
-
-        return $this->render($template, $args);
-
-    }
-
-
-
-
 }

@@ -3,6 +3,7 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
@@ -11,26 +12,31 @@ class Product
 {
 
     /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="products")
-     * @ORM\JoinColumn(nullable=true)
+     * @ORM\OneToMany(targetEntity="App\Entity\Review", mappedBy="products")
      */
-    private $category;
+    private $review;
+    public function __construct()
+    {
+        $this->review = new ArrayCollection();
+    }
+
 
     /**
      * @return mixed
      */
-    public function getCategory()
+    public function getReview()
     {
-        return $this->category;
+        return $this->review;
     }
 
     /**
-     * @param mixed $cathegory
+     * @param mixed $review
      */
-    public function setCategory($category)
+    public function setReview($review)
     {
-        $this->category = $category;
+        $this->review = $review;
     }
+
 
 
     /**
@@ -42,14 +48,15 @@ class Product
 
     /**
      * @ORM\Column(type="string", length=100)
+     *
      */
     private $title;
 
     /**
      * @ORM\Column(type="string", length=100)
+     *
      */
     private $description;
-
 
     /**
      * @ORM\Column(type="decimal", scale=2, nullable=true)
@@ -59,16 +66,20 @@ class Product
 
     /**
      * @ORM\Column(type="string", length=100)
+     *
      */
     private $summary;
 
+
     /**
      * @ORM\Column(type="string", length=100)
+     *
      */
     private $photo;
 
     /**
      * @ORM\Column(type="string", length=100)
+     *
      */
     private $ingredients;
 
@@ -186,8 +197,11 @@ class Product
         $this->ingredients = $ingredients;
     }
 
-
-
+    public function __toString()
+    {
+        return "{$this->title}";
+        // TODO: Implement __toString() method.
+    }
 
     // add your own fields
 }
