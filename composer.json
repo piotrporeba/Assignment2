@@ -4,6 +4,7 @@
     "require": {
         "php": "^7.0.8",
         "ext-iconv": "*",
+        "doctrine/doctrine-fixtures-bundle": "^3.0",
         "koff/crud-maker-bundle": "^1.1",
         "sensio/framework-extra-bundle": "^5.1",
         "sensiolabs/security-checker": "^4.1",
