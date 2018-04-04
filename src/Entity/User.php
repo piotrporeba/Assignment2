@@ -33,6 +33,10 @@ class User implements UserInterface, \Serializable
      */
     private $roles = [];
 
+    public function getRoles(){
+        return $this->roles;
+    }
+
     public function getSalt()
     {
         // no salt needed since we are using bcrypt
@@ -67,14 +71,7 @@ class User implements UserInterface, \Serializable
             ) = unserialize($serialized);
     }
 
-    public function getRoles()
-    {
-        $roles = $this->roles;
-        // ensure always contains ROLE_USER
-        $roles[] = 'ROLE_USER';
 
-        return array_unique($roles);
-    }
 
     /**
      * Set roles
