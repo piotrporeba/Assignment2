@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * Product Controller class
+ * @package App\Controller
+ * @author Piotr Poreba
+ */
 namespace App\Controller;
 
 use App\Entity\Product;
@@ -16,8 +20,8 @@ use Symfony\Component\HttpFoundation\Response;
 class ProductController extends Controller
 {
     /**
+     * index function
      * @Route("/", name="index")
-     *
      * @return Response
      */
     public function index()

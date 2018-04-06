@@ -1,21 +1,27 @@
 <?php
+/**
+ * review
+ */
 
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * class review
  * @ORM\Entity(repositoryClass="App\Repository\ReviewRepository")
  */
 class Review
 {
     /**
+     * products
      * @ORM\ManyToOne(targetEntity="App\Entity\Product", inversedBy="review")
      * @ORM\JoinColumn(nullable=true)
      */
     private $products;
 
     /**
+     * id
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
@@ -23,41 +29,49 @@ class Review
     private $id;
 
     /**
+     * author
      * @ORM\Column(type="string")
      */
     private $author;
 
     /**
+     * date
      * @ORM\Column(type="string")
      */
     private $date;
 
     /**
+     * summary
      * @ORM\Column(type="string")
      */
     private $summary;
 
     /**
+     * retailers
      * @ORM\Column(type="string")
      */
     private $retailers;
 
     /**
+     * price
      * @ORM\Column(type="integer")
      */
     private $price;
 
     /**
+     * score
      * @ORM\Column(type="integer")
      */
     private $score;
 
     /**
+     * ispubic
      * @ORM\Column(type="boolean")
      */
     private $isPublic;
 
     /**
+     * getproducts
      * @return mixed
      */
     public function getProducts()
@@ -66,6 +80,7 @@ class Review
     }
 
     /**
+     * setProducts
      * @param mixed $products
      */
     public function setProducts($products)
@@ -74,6 +89,7 @@ class Review
     }
 
     /**
+     * getId
      * @return mixed
      */
     public function getId()
@@ -82,6 +98,7 @@ class Review
     }
 
     /**
+     * setId
      * @param mixed $id
      */
     public function setId($id)
@@ -90,6 +107,7 @@ class Review
     }
 
     /**
+     * getauthor
      * @return mixed
      */
     public function getAuthor()
@@ -98,6 +116,7 @@ class Review
     }
 
     /**
+     * setAuthor
      * @param mixed $author
      */
     public function setAuthor($author)
@@ -106,6 +125,7 @@ class Review
     }
 
     /**
+     * getDate
      * @return mixed
      */
     public function getDate()
@@ -114,6 +134,7 @@ class Review
     }
 
     /**
+     * setDate
      * @param mixed $date
      */
     public function setDate($date)
@@ -122,6 +143,7 @@ class Review
     }
 
     /**
+     * getSummary
      * @return mixed
      */
     public function getSummary()
@@ -130,6 +152,7 @@ class Review
     }
 
     /**
+     * setSummary
      * @param mixed $summary
      */
     public function setSummary($summary)
@@ -138,6 +161,7 @@ class Review
     }
 
     /**
+     * getRetailers
      * @return mixed
      */
     public function getRetailers()
@@ -146,6 +170,7 @@ class Review
     }
 
     /**
+     * setRetailers
      * @param mixed $retailers
      */
     public function setRetailers($retailers)
@@ -154,6 +179,7 @@ class Review
     }
 
     /**
+     * getPrice
      * @return mixed
      */
     public function getPrice()
@@ -162,6 +188,7 @@ class Review
     }
 
     /**
+     * setPrice
      * @param mixed $price
      */
     public function setPrice($price)
@@ -170,6 +197,7 @@ class Review
     }
 
     /**
+     * getScore
      * @return mixed
      */
     public function getScore()
@@ -178,6 +206,7 @@ class Review
     }
 
     /**
+     * setScore
      * @param mixed $score
      */
     public function setScore($score)
@@ -186,6 +215,7 @@ class Review
     }
 
     /**
+     * getIsPublic
      * @return mixed
      */
     public function getIsPublic()
@@ -194,6 +224,7 @@ class Review
     }
 
     /**
+     * setIsPublic
      * @param mixed $isPublic
      */
     public function setIsPublic($isPublic)

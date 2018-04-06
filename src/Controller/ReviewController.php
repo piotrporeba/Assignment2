@@ -1,5 +1,9 @@
 <?php
-
+/**
+ * reviewController
+ * @author Piotr Poreba
+ * @package App\Controller
+ */
 namespace App\Controller;
 
 use App\Entity\Review;
@@ -17,7 +21,6 @@ class ReviewController extends Controller
 {
     /**
      * @Route("/", name="index")
-     *
      * @return Response
      */
     public function index()

@@ -1,4 +1,7 @@
 <?php
+/**
+ * user class
+ */
 
 namespace App\Entity;
 
@@ -6,12 +9,14 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
+ * user implements serialisable
  * @ORM\Table(name="app_users")
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
  */
 class User implements UserInterface, \Serializable
 {
     /**
+     * id
      * @ORM\Column(type="integer")
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
@@ -19,35 +24,53 @@ class User implements UserInterface, \Serializable
     private $id;
 
     /**
+     * username
      * @ORM\Column(type="string", length=25, unique=true)
      */
     private $username;
 
     /**
+     * password
      * @ORM\Column(type="string", length=64)
      */
     private $password;
 
     /**
+     * roles
      * @ORM\Column(type="json_array")
      */
     private $roles = [];
 
+    /**
+     * getRoles
+     * @return array
+     */
     public function getRoles(){
         return $this->roles;
     }
 
+    /**
+     * getSalt
+     * @return null|string
+     */
     public function getSalt()
     {
         // no salt needed since we are using bcrypt
         return null;
     }
 
+    /**
+     * eraseCredentials
+     */
     public function eraseCredentials()
     {
     }
 
-    /** @see \Serializable::serialize() */
+    /**
+     * serialize
+     * @return string
+     * @see \Serializable::serialize()
+     */
     public function serialize()
     {
         return serialize(array(
@@ -59,7 +82,11 @@ class User implements UserInterface, \Serializable
         ));
     }
 
-    /** @see \Serializable::unserialize() */
+    /**
+     * unserialize
+     * @param string $serialized
+     * @see \Serializable::unserialize()
+     */
     public function unserialize($serialized)
     {
         list (
@@ -75,7 +102,6 @@ class User implements UserInterface, \Serializable
 
     /**
      * Set roles
-     *
      * @param array $roles *
      * @return User
      */
@@ -87,6 +113,7 @@ class User implements UserInterface, \Serializable
 
 
     /**
+     * getId
      * @return mixed
      */
     public function getId()
@@ -95,6 +122,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * setId
      * @param mixed $id
      */
     public function setId($id): void
@@ -103,6 +131,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * getUserName
      * @return mixed
      */
     public function getUsername()
@@ -111,6 +140,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * setUserName
      * @param mixed $username
      */
     public function setUsername($username): void
@@ -119,6 +149,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * getPassword
      * @return mixed
      */
     public function getPassword()
@@ -127,6 +158,7 @@ class User implements UserInterface, \Serializable
     }
 
     /**
+     * setPassword
      * @param mixed $password
      */
     public function setPassword($password): void

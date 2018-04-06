@@ -1,4 +1,9 @@
 <?php
+/**
+ * product class
+ * @author Piotr Poreba
+ * @package App\Entity
+ */
 
 namespace App\Entity;
 
@@ -6,15 +11,21 @@ use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
 /**
+ * class product
  * @ORM\Entity(repositoryClass="App\Repository\ProductRepository")
  */
 class Product
 {
 
     /**
+     * param review
      * @ORM\OneToMany(targetEntity="App\Entity\Review", mappedBy="products")
      */
     private $review;
+
+    /**
+     * Product constructor.
+     */
     public function __construct()
     {
         $this->review = new ArrayCollection();
@@ -22,6 +33,7 @@ class Product
 
 
     /**
+     * function get review
      * @return mixed
      */
     public function getReview()
@@ -30,6 +42,7 @@ class Product
     }
 
     /**
+     * function set review
      * @param mixed $review
      */
     public function setReview($review)
@@ -40,6 +53,7 @@ class Product
 
 
     /**
+     * param id
      * @ORM\Id
      * @ORM\GeneratedValue
      * @ORM\Column(type="integer")
@@ -47,24 +61,28 @@ class Product
     private $id;
 
     /**
+     * param title
      * @ORM\Column(type="string", length=100)
      *
      */
     private $title;
 
     /**
+     * param description
      * @ORM\Column(type="string", length=100)
      *
      */
     private $description;
 
     /**
+     * param price
      * @ORM\Column(type="decimal", scale=2, nullable=true)
      */
     private $price;
 
 
     /**
+     * param summary
      * @ORM\Column(type="string", length=100)
      *
      */
@@ -72,12 +90,14 @@ class Product
 
 
     /**
+     * param photo
      * @ORM\Column(type="string", length=100)
      *
      */
     private $photo;
 
     /**
+     * param ingreedients
      * @ORM\Column(type="string", length=100)
      *
      */
@@ -85,12 +105,14 @@ class Product
 
 
     /**
+     * param ispublic
      * @ORM\Column(type="boolean")
      *
      */
     private $isPublic;
 
     /**
+     * function getid
      * @return mixed
      */
     public function getId()
@@ -99,6 +121,7 @@ class Product
     }
 
     /**
+     * function setId
      * @param mixed $id
      */
     public function setId($id)
@@ -107,6 +130,7 @@ class Product
     }
 
     /**
+     * function get title
      * @return mixed
      */
     public function getTitle()
@@ -115,6 +139,7 @@ class Product
     }
 
     /**
+     * function set title
      * @param mixed $title
      */
     public function setTitle($title)
@@ -125,6 +150,7 @@ class Product
 
 
     /**
+     * function getDescription
      * @return mixed
      */
     public function getDescription()
@@ -133,6 +159,7 @@ class Product
     }
 
     /**
+     * function setDescription
      * @param mixed $description
      */
     public function setDescription($description)
@@ -141,6 +168,7 @@ class Product
     }
 
     /**
+     * function getprice
      * @return mixed
      */
     public function getPrice()
@@ -149,6 +177,7 @@ class Product
     }
 
     /**
+     * function setprice
      * @param mixed $price
      */
     public function setPrice($price)
@@ -157,6 +186,7 @@ class Product
     }
 
     /**
+     * function getSummary
      * @return mixed
      */
     public function getSummary()
@@ -165,6 +195,7 @@ class Product
     }
 
     /**
+     * function setsummary
      * @param mixed $summary
      */
     public function setSummary($summary)
@@ -173,6 +204,7 @@ class Product
     }
 
     /**
+     * function getphoto
      * @return mixed
      */
     public function getPhoto()
@@ -181,6 +213,7 @@ class Product
     }
 
     /**
+     * function setphoto
      * @param mixed $photo
      */
     public function setPhoto($photo)
@@ -189,6 +222,7 @@ class Product
     }
 
     /**
+     * function getIngredients
      * @return mixed
      */
     public function getIngredients()
@@ -197,6 +231,7 @@ class Product
     }
 
     /**
+     * function setIngredientds
      * @param mixed $ingredients
      */
     public function setIngredients($ingredients)
@@ -205,6 +240,7 @@ class Product
     }
 
     /**
+     * function getIsPublic
      * @return mixed
      */
     public function getIsPublic()
@@ -213,6 +249,7 @@ class Product
     }
 
     /**
+     * function setIsublic
      * @param mixed $isPublic
      */
     public function setIsPublic($isPublic)
@@ -221,12 +258,14 @@ class Product
     }
 
 
-
-
+    /**
+     * function tostring
+     * @return string
+     */
     public function __toString()
     {
         return "{$this->title}";
-        // TODO: Implement __toString() method.
+
     }
 
     // add your own fields
