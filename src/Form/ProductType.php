@@ -18,6 +18,7 @@ class ProductType extends AbstractType
             ->add('summary')
             ->add('photo')
             ->add('ingredients')
+            ->add('isPublic')
         ;
     }
 

@@ -19,6 +19,7 @@ class ReviewType extends AbstractType
             ->add('price')
             ->add('score')
             ->add('products')
+            ->add('isPublic')
         ;
     }
 

@@ -1,10 +1,10 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Product index{% endblock %}
+{% block title %}Seafood index{% endblock %}
 
 {% block body %}
 
-    <h1>Product index</h1>
+    <h1>Seafood index</h1>
     <table>
         <thead>
             <tr>
@@ -20,6 +20,7 @@
         </thead>
         <tbody>
         {% for product in products %}
+            {% if is_granted('ROLE_USER') and product.isPublic != true %}
             <tr>
                 <td>{{ product.id }}</td>
                 <td>{{ product.title }}</td>
@@ -33,6 +34,26 @@
                     <a href="{{ path('product_edit', {'id': product.id}) }}">edit</a>
                 </td>
             </tr>
+                {% endif %}
+
+                {% if product.isPublic == true %}
+                    <tr>
+                        <td>{{ product.id }}</td>
+                        <td>{{ product.title }}</td>
+                        <td>{{ product.description }}</td>
+                        <td>{{ product.price }}</td>
+                        <td>{{ product.summary }}</td>
+                        <td>{{ product.photo }}</td>
+                        <td>{{ product.ingredients }}</td>
+                        <td>
+                            <a href="{{ path('product_show', {'id': product.id}) }}">show</a>
+                            <a href="{{ path('product_edit', {'id': product.id}) }}">edit</a>
+                        </td>
+                    </tr>
+                {% endif %}
+
+
+
         {% else %}
             <tr>
                 <td colspan="8">no records found</td>
@@ -40,6 +61,12 @@
         {% endfor %}
         </tbody>
     </table>
-    <a href="{{ path('product_new') }}">Create new</a>
+    {% if is_granted('ROLE_USER') %}
+        <li>
+            <a href="{{ path('product_new') }}">Create new Seafood</a>
+        </li>
+    {% endif %}
+
+
 
 {% endblock %}

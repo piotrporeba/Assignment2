@@ -83,6 +83,13 @@ class Product
      */
     private $ingredients;
 
+
+    /**
+     * @ORM\Column(type="boolean")
+     *
+     */
+    private $isPublic;
+
     /**
      * @return mixed
      */
@@ -196,6 +203,25 @@ class Product
     {
         $this->ingredients = $ingredients;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getIsPublic()
+    {
+        return $this->isPublic;
+    }
+
+    /**
+     * @param mixed $isPublic
+     */
+    public function setIsPublic($isPublic)
+    {
+        $this->isPublic = $isPublic;
+    }
+
+
+
 
     public function __toString()
     {
