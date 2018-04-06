@@ -39,12 +39,12 @@
         <tr>
         <th>Reviews of this product</th>
             <td> {% for review in product.review %}
-                    {% if is_granted('ROLE_USER') and review.isPublic != true %}
+                    {% if is_granted('ROLE_USER')%}
                         <a href="{{  path('review_show',{'id': review.id }) }}"> {{ review.summary }} </a>
                         <br>
 
                     {% endif %}
-                        {% if review.isPublic == true %}
+                        {% if not is_granted('ROLE_USER') and review.isPublic == true %}
                             <a href="{{  path('review_show',{'id': review.id }) }}"> {{ review.summary }} </a>
                             <br>
                         {% endif %}

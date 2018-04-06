@@ -39,6 +39,7 @@
             {% endif %}
 
             {% if not is_granted('ROLE_USER') and review.isPublic == true %}
+                <tr>
                 <td>{{ review.id }}</td>
                 <td>{{ review.author }}</td>
                 <td>{{ review.date }}</td>
@@ -49,6 +50,7 @@
                 <td>
                     <a href="{{ path('review_show', {'id': review.id}) }}">show</a>
                 </td>
+                </tr>
             {% endif %}
 
         {% else %}

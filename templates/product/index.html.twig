@@ -20,7 +20,7 @@
         </thead>
         <tbody>
         {% for product in products %}
-            {% if is_granted('ROLE_USER') and product.isPublic != true %}
+            {% if is_granted('ROLE_USER')%}
             <tr>
                 <td>{{ product.id }}</td>
                 <td>{{ product.title }}</td>
@@ -36,7 +36,7 @@
             </tr>
                 {% endif %}
 
-                {% if product.isPublic == true %}
+                {% if not is_granted('ROLE_USER') and product.isPublic == true %}
                     <tr>
                         <td>{{ product.id }}</td>
                         <td>{{ product.title }}</td>
@@ -47,7 +47,7 @@
                         <td>{{ product.ingredients }}</td>
                         <td>
                             <a href="{{ path('product_show', {'id': product.id}) }}">show</a>
-                            <a href="{{ path('product_edit', {'id': product.id}) }}">edit</a>
+
                         </td>
                     </tr>
                 {% endif %}
