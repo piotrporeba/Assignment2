@@ -1,91 +1,74 @@
 <?php
 
-namespace App\Tests\Controller;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Response;
 
+class ReviewcontrollerTest extends WebTestCase
 
-class ReviewControllerTest extends WebTestCase
 {
-
-    public function testReviewControllerResponse_Moved()
-    {
-        // arrange
+    public function testReviewPageResponseCodeMoved() {
+        // Arrange
         $url = '/review';
         $httpMethod = 'GET';
         $client = static::createClient();
-
-        //Act
+        // Assert
         $client->request($httpMethod, $url);
-
-        //Assert
-        $this->assertSame(
-            Response::HTTP_MOVED_PERMANENTLY,
-            $client->getResponse()->getStatusCode()
-        );
+        // Assert
+        $this->assertSame( Response::HTTP_MOVED_PERMANENTLY, $client->getResponse()->getStatusCode() );
     }
 
 
-    public function testReviewPageContainsRedirecting()
-    {
-        // arrange
-        $url = '/review';
+
+    public function testReviewRedirectingPageContent() {
+        // Arrange
+        $url = '/review/';
         $httpMethod = 'GET';
         $client = static::createClient();
-        $searchText = 'redirecting';
-
-
-        //Act
+        $searchText = 'Redirecting';
+        // Act
         $client->request($httpMethod, $url);
-        $content = $client->getResponse()->getContent();
 
-        // to lower case
-        $searchTextLowerCase = strtolower($searchText);
-        $contentLowerCase = strtolower($content);
-
-        //Assert
-        $this->assertContains($searchTextLowerCase, $contentLowerCase);
+        // Assert
+        $this->assertContains( $searchText, $client->getResponse()->getContent() );
     }
 
-    public function testReviewShowPageContainsShark()
-    {
-        // arrange
+    public function testSpecificReviewPageContent() {
+        // Arrange
         $url = '/review/shark';
         $httpMethod = 'GET';
         $client = static::createClient();
-        $searchText = 'shark';
-
-        //Act
+        $searchText = 'nice';
+        // Act
         $client->request($httpMethod, $url);
-        $content = $client->getResponse()->getContent();
 
-        // to lower case
-        $searchTextLowerCase = strtolower($searchText);
-        $contentLowerCase = strtolower($content);
-
-        //Assert
-        $this->assertContains($searchTextLowerCase, $contentLowerCase);
+        // Assert
+        $this->assertContains( $searchText, $client->getResponse()->getContent() );
     }
 
-    public function testReviewEditPageContainsTitle()
-    {
-        // arrange
+    public function testNewReviewPageContent() {
+        // Arrange
+        $url = '/review/new';
+        $httpMethod = 'GET';
+        $client = static::createClient();
+        $searchText = 'author';
+        // Act
+        $client->request($httpMethod, $url);
+
+        // Assert
+        $this->assertContains( $searchText, $client->getResponse()->getContent() );
+    }
+
+    public function testEditReviewPageContent() {
+        // Arrange
         $url = '/review/shark/edit';
         $httpMethod = 'GET';
         $client = static::createClient();
-        $searchText = 'title';
-
-
-        //Act
+        $searchText = 'author';
+        // Act
         $client->request($httpMethod, $url);
-        $content = $client->getResponse()->getContent();
 
-        // to lower case
-        $searchTextLowerCase = strtolower($searchText);
-        $contentLowerCase = strtolower($content);
-
-        //Assert
-        $this->assertContains($searchTextLowerCase, $contentLowerCase);
+        // Assert
+        $this->assertContains( $searchText, $client->getResponse()->getContent() );
     }
 
 

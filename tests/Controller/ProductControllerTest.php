@@ -1,109 +1,97 @@
 <?php
 
-
-namespace App\Tests\Controller;
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 use Symfony\Component\HttpFoundation\Response;
 
-
 class ProductControllerTest extends WebTestCase
-{
 
-    public function testProductControllerResponse_Moved()
-    {
-        // arrange
+{
+    public function testProductPageResponseCodeMoved() {
+        // Arrange
         $url = '/product';
         $httpMethod = 'GET';
         $client = static::createClient();
-
-        //Act
+        // Assert
         $client->request($httpMethod, $url);
-
-        //Assert
-        $this->assertSame(
-            Response::HTTP_MOVED_PERMANENTLY,
-            $client->getResponse()->getStatusCode()
-        );
+        // Assert
+        $this->assertSame( Response::HTTP_MOVED_PERMANENTLY, $client->getResponse()->getStatusCode() );
     }
 
-    public function testProductControllerNewItemResponse_OK()
-    {
-        // arrange
+    public function testProductindexPageResponseCodeMoved() {
+        // Arrange
+        $url = '/product/19';
+        $httpMethod = 'GET';
+        $client = static::createClient();
+        // Assert
+        $client->request($httpMethod, $url);
+        // Assert
+        $this->assertNotNull($client->getResponse()->getStatusCode() );
+    }
+
+    public function testNewProductPageResponseCodeOk() {
+        // Arrange
         $url = '/product/new';
         $httpMethod = 'GET';
         $client = static::createClient();
-
-        //Act
+        // Assert
         $client->request($httpMethod, $url);
-
-        //Assert
-        $this->assertSame(
-            Response::HTTP_OK,
-            $client->getResponse()->getStatusCode()
-        );
+        // Assert
+        $this->assertSame( Response::HTTP_OK, $client->getResponse()->getStatusCode() );
     }
 
 
-    public function testProductPageContainsRedirecting()
-    {
-        // arrange
-        $url = '/product';
+
+    public function testProductRedirectingPageContent() {
+        // Arrange
+        $url = '/product/';
         $httpMethod = 'GET';
         $client = static::createClient();
-        $searchText = 'redirecting';
-
-
-        //Act
+        $searchText = 'Redirecting';
+        // Act
         $client->request($httpMethod, $url);
-        $content = $client->getResponse()->getContent();
 
-        // to lower case
-        $searchTextLowerCase = strtolower($searchText);
-        $contentLowerCase = strtolower($content);
-
-        //Assert
-        $this->assertContains($searchTextLowerCase, $contentLowerCase);
+        // Assert
+        $this->assertContains( $searchText, $client->getResponse()->getContent() );
     }
 
-    public function testProductShowPageContainsshark()
-    {
-        // arrange
-        $url = '/product/shark';
+    public function testProductPageContent() {
+        // Arrange
+        $url = '/product/lamb chop';
         $httpMethod = 'GET';
         $client = static::createClient();
-        $searchText = 'shark';
-
-
-        //Act
+        $searchText = 'lean';
+        // Act
         $client->request($httpMethod, $url);
-        $content = $client->getResponse()->getContent();
 
-        // to lower case
-        $searchTextLowerCase = strtolower($searchText);
-        $contentLowerCase = strtolower($content);
-
-        //Assert
-        $this->assertContains($searchTextLowerCase, $contentLowerCase);
+        // Assert
+        $this->assertContains( $searchText, $client->getResponse()->getContent() );
     }
 
-    public function testProductEditPageContainsshark()
-    {
-        // arrange
-        $url = '/product/shark/edit';
+    public function testNewProductPageContent() {
+        // Arrange
+        $url = '/product/lamb chop';
         $httpMethod = 'GET';
         $client = static::createClient();
         $searchText = 'title';
-
-
-        //Act
+        // Act
         $client->request($httpMethod, $url);
-        $content = $client->getResponse()->getContent();
 
-        // to lower case
-        $searchTextLowerCase = strtolower($searchText);
-        $contentLowerCase = strtolower($content);
-
-        //Assert
-        $this->assertContains($searchTextLowerCase, $contentLowerCase);
+        // Assert
+        $this->assertContains( $searchText, $client->getResponse()->getContent() );
     }
+
+    public function testEditProductPageContent() {
+        // Arrange
+        $url = '/product/lamb chop/edit';
+        $httpMethod = 'GET';
+        $client = static::createClient();
+        $searchText = 'title';
+        // Act
+        $client->request($httpMethod, $url);
+
+        // Assert
+        $this->assertContains( $searchText, $client->getResponse()->getContent() );
+    }
+
+
 }

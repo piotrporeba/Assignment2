@@ -1,0 +1,62 @@
+App\Tests\Controller\AdminController
+ [x] Admin home page redirection to login
+
+App\Tests\Controller\DefaultController
+ [x] DefaultControllerResponse OK
+ [x] Default home page contains welcome
+
+ProductController
+ [x] Product page response code moved
+ [x] Productindex page response code moved
+ [x] New product page response code ok
+ [x] Product redirecting page content
+ [x] Product page content
+ [x] New product page content
+ [x] Edit product page content
+
+Reviewcontroller
+ [x] Review page response code moved
+ [x] Review redirecting page content
+ [x] Specific review page content
+ [x] New review page content
+ [x] Edit review page content
+
+App\Tests\Controller\Securitycontroller
+ [x] SecurityHomePageResponse OK
+ [x] Security page contains login
+
+App\tests\Entity\Product
+ [x] Create object
+ [x] Set ingreedients
+ [x] Set summary
+ [x] Set price
+ [x] Set description
+ [x] Set title
+ [x] Id
+ [x] Review
+ [x] Score
+ [x] Is public
+ [x] toString
+
+App\Tests\Entity\Review
+ [x] Create object
+ [x] Set is public
+ [x] Set score
+ [x] Set price
+ [x] Set summary
+ [x] Set retailers
+ [x] Set date
+ [x] Set author
+ [x] Set id
+ [x] Set products
+
+App\Tests\Entity\User
+ [x] Create object
+ [x] Set id
+ [x] Set user name
+ [x] Set password
+ [x] Set roles
+ [x] Get salt
+ [x] Erase credentials
+ [x] Serialize
+

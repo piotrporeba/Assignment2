@@ -92,6 +92,30 @@ class ReviewTest extends TestCase
 
     }
 
+    public function testSetId(){
+
+        $review = new Review();
+        $expectedResult =10;
+        $review->setId($expectedResult);
+
+        $this->assertEquals($expectedResult, $review->getId());
+
+    }
+
+    public function testSetProducts(){
+
+        $review = new Review();
+        $expectedResult =[
+            "fish",
+            "crab",
+        ];
+        $review->setProducts($expectedResult);
+
+        $this->assertEquals($expectedResult, $review->getProducts());
+
+    }
+
+
 
 
 }

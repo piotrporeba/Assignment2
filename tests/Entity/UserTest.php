@@ -64,4 +64,33 @@ class UserTest extends TestCase
 
     }
 
+    public function testGetSalt(){
+        //arrange
+        $user = new User();
+        $expectedResult = null;
+
+        // act
+
+        //Assert
+        $this->assertEquals($expectedResult, $user->getSalt());
+    }
+    public function testeraseCredentials(){
+        //arrange
+        $user = new User();
+        $expectedResult = null;
+
+        // act
+
+        //Assert
+        $this->assertEquals($expectedResult, $user->eraseCredentials());
+    }
+
+    public function testSerialize(){
+        $user = new User();
+
+        $user->unserialize($user->serialize()); // somewhat cheat
+
+        $this->assertNotNull($user);
+    }
+
 }

@@ -106,6 +106,15 @@ class ProductTest extends TestCase
         $this->assertEquals($expectedResult, $product->getIsPublic());
 
     }
+    public function test__toString(){
+
+        $product = new Product();
+        $expectedResult =null;
+        $product->__toString();
+
+        $this->assertEquals($expectedResult, $product->__toString());
+
+    }
 
 
 }
