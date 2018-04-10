@@ -14,6 +14,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Security;
+
 /**
  * @Route("/review", name="review_")
  */
@@ -34,6 +36,7 @@ class ReviewController extends Controller
 
     /**
      * @Route("/new", name="new")
+     * @Security("has_role('ROLE_ADMIN')")
      * @Method({"GET", "POST"})
      */
     public function new(Request $request)
@@ -69,6 +72,7 @@ class ReviewController extends Controller
 
     /**
      * @Route("/{id}/edit", name="edit")
+     * @Security("has_role('ROLE_ADMIN')")
      * @Method({"GET", "POST"})
      */
     public function edit(Request $request, Review $review)
@@ -90,6 +94,7 @@ class ReviewController extends Controller
 
     /**
      * @Route("/{id}", name="delete")
+     * @Security("has_role('ROLE_ADMIN')")
      * @Method("DELETE")
      */
     public function delete(Request $request, Review $review)

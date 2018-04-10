@@ -56,15 +56,15 @@ class ProductControllerTest extends WebTestCase
 
     public function testProductPageContent() {
         // Arrange
-        $url = '/product/lamb chop';
+        $url = '/product/{19}';
         $httpMethod = 'GET';
         $client = static::createClient();
-        $searchText = 'lean';
+        $searchText = 'Product';
         // Act
         $client->request($httpMethod, $url);
 
         // Assert
-        $this->assertContains( $searchText, $client->getResponse()->getContent() );
+        $this->assertContains($searchText, $client->getResponse()->getContent() );
     }
 
     public function testNewProductPageContent() {
@@ -82,7 +82,7 @@ class ProductControllerTest extends WebTestCase
 
     public function testEditProductPageContent() {
         // Arrange
-        $url = '/product/lamb chop/edit';
+        $url = '/product/shark/edit';
         $httpMethod = 'GET';
         $client = static::createClient();
         $searchText = 'title';
