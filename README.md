@@ -1,7 +1,8 @@
 # Seafood Website assignment
 This is a 3rd year project 
 
-First Commit
-"# Assignment2" 
 
-Category auto-generated
+"Assignment2" 
+
+Live website:
+https://asignment2.herokuapp.com/
