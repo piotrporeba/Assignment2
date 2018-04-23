@@ -2,44 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f133587-1612-4f73-aa87-ad623f2b9aaa" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/build/logfile.xml" afterPath="$PROJECT_DIR$/build/logfile.xml" />
-      <change beforePath="$PROJECT_DIR$/build/report/Controller/AdminController.php.html" afterPath="$PROJECT_DIR$/build/report/Controller/AdminController.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Controller/DefaultController.php.html" afterPath="$PROJECT_DIR$/build/report/Controller/DefaultController.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Controller/ProductController.php.html" afterPath="$PROJECT_DIR$/build/report/Controller/ProductController.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Controller/ReviewController.php.html" afterPath="$PROJECT_DIR$/build/report/Controller/ReviewController.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Controller/SecurityController.php.html" afterPath="$PROJECT_DIR$/build/report/Controller/SecurityController.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Controller/dashboard.html" afterPath="$PROJECT_DIR$/build/report/Controller/dashboard.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Controller/index.html" afterPath="$PROJECT_DIR$/build/report/Controller/index.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/DataFixtures/LoadUsers.php.html" afterPath="$PROJECT_DIR$/build/report/DataFixtures/LoadUsers.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/DataFixtures/dashboard.html" afterPath="$PROJECT_DIR$/build/report/DataFixtures/dashboard.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/DataFixtures/index.html" afterPath="$PROJECT_DIR$/build/report/DataFixtures/index.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Entity/Product.php.html" afterPath="$PROJECT_DIR$/build/report/Entity/Product.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Entity/Review.php.html" afterPath="$PROJECT_DIR$/build/report/Entity/Review.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Entity/User.php.html" afterPath="$PROJECT_DIR$/build/report/Entity/User.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Entity/dashboard.html" afterPath="$PROJECT_DIR$/build/report/Entity/dashboard.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Entity/index.html" afterPath="$PROJECT_DIR$/build/report/Entity/index.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Form/ProductType.php.html" afterPath="$PROJECT_DIR$/build/report/Form/ProductType.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Form/ReviewType.php.html" afterPath="$PROJECT_DIR$/build/report/Form/ReviewType.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Form/dashboard.html" afterPath="$PROJECT_DIR$/build/report/Form/dashboard.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Form/index.html" afterPath="$PROJECT_DIR$/build/report/Form/index.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Kernel.php.html" afterPath="$PROJECT_DIR$/build/report/Kernel.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Repository/ProductRepository.php.html" afterPath="$PROJECT_DIR$/build/report/Repository/ProductRepository.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Repository/ReviewRepository.php.html" afterPath="$PROJECT_DIR$/build/report/Repository/ReviewRepository.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Repository/UserRepository.php.html" afterPath="$PROJECT_DIR$/build/report/Repository/UserRepository.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Repository/dashboard.html" afterPath="$PROJECT_DIR$/build/report/Repository/dashboard.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Repository/index.html" afterPath="$PROJECT_DIR$/build/report/Repository/index.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Security/AccessDeniedHandler.php.html" afterPath="$PROJECT_DIR$/build/report/Security/AccessDeniedHandler.php.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Security/dashboard.html" afterPath="$PROJECT_DIR$/build/report/Security/dashboard.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/Security/index.html" afterPath="$PROJECT_DIR$/build/report/Security/index.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/dashboard.html" afterPath="$PROJECT_DIR$/build/report/dashboard.html" />
-      <change beforePath="$PROJECT_DIR$/build/report/index.html" afterPath="$PROJECT_DIR$/build/report/index.html" />
-      <change beforePath="$PROJECT_DIR$/build/testdox.html" afterPath="$PROJECT_DIR$/build/testdox.html" />
-      <change beforePath="$PROJECT_DIR$/build/testdox.txt" afterPath="$PROJECT_DIR$/build/testdox.txt" />
-      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" afterPath="$PROJECT_DIR$/phpunit.xml.dist" />
+      <change beforePath="$PROJECT_DIR$/.idea/basic2.iml" afterPath="$PROJECT_DIR$/.idea/basic2.iml" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change beforePath="$PROJECT_DIR$/templates/product/index.html.twig" afterPath="$PROJECT_DIR$/templates/product/index.html.twig" />
-      <change beforePath="$PROJECT_DIR$/tests/Controller/ProductControllerTest.php" afterPath="$PROJECT_DIR$/tests/Controller/ProductControllerTest.php" />
-      <change beforePath="$PROJECT_DIR$/tests/Controller/ReviewControllerTest.php" afterPath="$PROJECT_DIR$/tests/Controller/ReviewControllerTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,7 +41,7 @@
       <file leaf-file-name="ProductControllerTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Controller/ProductControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="254">
+            <state relative-caret-position="3225">
               <caret line="130" column="36" lean-forward="false" selection-start-line="130" selection-start-column="36" selection-end-line="130" selection-end-column="36" />
               <folding />
             </state>
@@ -93,11 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/product/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="500">
-              <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="112">
+              <caret line="41" column="57" lean-forward="false" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -106,8 +71,8 @@
       <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/review/index.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="775">
-              <caret line="31" column="24" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
+            <state relative-caret-position="100">
+              <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="76" />
               <folding />
             </state>
           </provider>
@@ -135,7 +100,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReviewControllerTest.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReviewControllerTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/tests/Controller/ReviewControllerTest.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="338">
@@ -198,11 +163,11 @@
         <option value="$PROJECT_DIR$/src/Controller/ProductController.php" />
         <option value="$PROJECT_DIR$/src/Controller/ReviewController.php" />
         <option value="$PROJECT_DIR$/templates/review/index.html.twig" />
-        <option value="$PROJECT_DIR$/templates/product/index.html.twig" />
         <option value="$PROJECT_DIR$/tests/Controller/AdminControllerTest.php" />
         <option value="$PROJECT_DIR$/phpunit.xml.dist" />
         <option value="$PROJECT_DIR$/tests/Controller/ProductControllerTest.php" />
         <option value="$PROJECT_DIR$/tests/Controller/ReviewControllerTest.php" />
+        <option value="$PROJECT_DIR$/templates/product/index.html.twig" />
       </list>
     </option>
   </component>
@@ -294,11 +259,11 @@
       <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
       <path value="$PROJECT_DIR$/vendor/symfony/browser-kit" />
       <path value="$PROJECT_DIR$/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/vendor/symfony/apache-pack" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="651" />
-    <option name="y" value="167" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="85" />
     <option name="width" value="1364" />
     <option name="height" value="1030" />
   </component>
@@ -317,6 +282,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -367,6 +333,12 @@
               <item name="Assignment2" type="b2602c69:ProjectViewProjectNode" />
               <item name="Assignment2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="review" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Assignment2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Assignment2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="templates" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="security" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
@@ -385,7 +357,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -449,11 +420,12 @@
       <workItem from="1523871776231" duration="129000" />
       <workItem from="1523879682533" duration="45000" />
       <workItem from="1524474463269" duration="1020000" />
+      <workItem from="1524484074511" duration="1181000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="106996000" />
+    <option name="totallyTimeSpent" value="108177000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -465,19 +437,20 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="651" y="167" width="1364" height="1030" extended-state="0" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3018868" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21297297" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37333333" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3691756" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -820,25 +793,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/review/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="31" column="24" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/product/index.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="500">
-          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests/Controller/ProductControllerTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="254">
+        <state relative-caret-position="3225">
           <caret line="130" column="36" lean-forward="false" selection-start-line="130" selection-start-column="36" selection-end-line="130" selection-end-column="36" />
           <folding />
         </state>
@@ -848,6 +805,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
           <caret line="116" column="35" lean-forward="false" selection-start-line="116" selection-start-column="35" selection-end-line="116" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/review/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="40" column="12" lean-forward="false" selection-start-line="40" selection-start-column="12" selection-end-line="40" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/product/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="112">
+          <caret line="41" column="57" lean-forward="false" selection-start-line="41" selection-start-column="57" selection-end-line="41" selection-end-column="57" />
           <folding />
         </state>
       </provider>
