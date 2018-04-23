@@ -6,10 +6,11 @@ App\Tests\Controller\DefaultController
  [x] Default home page contains welcome
 
 ProductController
+ [x] Product page response and contains
+ [x] Product redirecting page content
  [x] Product page response code moved
  [x] Productindex page response code moved
- [x] New product page response code ok
- [x] Product redirecting page content
+ [x] New product page response code found
  [x] Product page content
  [x] New product page content
  [x] Edit product page content
