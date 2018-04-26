@@ -1,4 +1,8 @@
 <?php
+/**
+ * UserRepository Class
+ * @author Piotr Poreba
+ */
 
 namespace App\Repository;
 

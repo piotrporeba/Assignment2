@@ -30,23 +30,6 @@ class Product
         $this->review = new ArrayCollection();
     }
 
-    /**
-     * function getreview()
-     * @return mixed
-     */
-    public function getReview()
-    {
-        return $this->review;
-    }
-
-    /**
-     * function setreview()
-     * @param mixed $review
-     */
-    public function setReview($review)
-    {
-        $this->review = $review;
-    }
 
     /**
      * param id
@@ -103,6 +86,24 @@ class Product
      *
      */
     private $isPublic;
+
+    /**
+     * function getreview()
+     * @return mixed
+     */
+    public function getReview()
+    {
+        return $this->review;
+    }
+
+    /**
+     * function setreview()
+     * @param mixed $review
+     */
+    public function setReview($review)
+    {
+        $this->review = $review;
+    }
 
     /**
      * function getid

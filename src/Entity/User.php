@@ -43,14 +43,6 @@ class User implements UserInterface, \Serializable
     private $roles = [];
 
     /**
-     * getRoles
-     * @return array
-     */
-    public function getRoles(){
-        return $this->roles;
-    }
-
-    /**
      * getSalt
      * @return null|string
      */
@@ -93,12 +85,9 @@ class User implements UserInterface, \Serializable
             $this->id,
             $this->username,
             $this->password,
-            // see section on salt below
-            // $this->salt
+
             ) = unserialize($serialized);
     }
-
-
 
     /**
      * Set roles
@@ -111,23 +100,12 @@ class User implements UserInterface, \Serializable
         return $this;
     }
 
-
     /**
-     * getId
-     * @return mixed
+     * getRoles
+     * @return array
      */
-    public function getId()
-    {
-        return $this->id;
-    }
-
-    /**
-     * setId
-     * @param mixed $id
-     */
-    public function setId($id): void
-    {
-        $this->id = $id;
+    public function getRoles(){
+        return $this->roles;
     }
 
     /**
@@ -164,6 +142,24 @@ class User implements UserInterface, \Serializable
     public function setPassword($password): void
     {
         $this->password = $password;
+    }
+
+    /**
+     * getId
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * setId
+     * @param mixed $id
+     */
+    public function setId($id): void
+    {
+        $this->id = $id;
     }
 
 }

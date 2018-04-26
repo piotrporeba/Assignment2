@@ -1,4 +1,8 @@
 <?php
+/**
+ * AccessDeniedHandler class
+ * @author Piotr Poreba
+ */
 namespace App\Security;
 
 use Psr\Log\LoggerInterface;

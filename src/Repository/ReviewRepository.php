@@ -1,4 +1,8 @@
 <?php
+/**
+ * ReviewRepository class
+ * @author Piotr Poreba
+ */
 
 namespace App\Repository;
 
