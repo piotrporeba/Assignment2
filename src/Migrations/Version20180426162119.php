@@ -18,7 +18,7 @@ class Version20180426162119 extends AbstractMigration
         $this->addSql('DROP INDEX IDX_794381C66C8A81A9');
         $this->addSql('CREATE TEMPORARY TABLE __temp__review AS SELECT id, products_id, summary, is_public FROM review');
         $this->addSql('DROP TABLE review');
-        $this->addSql('CREATE TABLE review (id INTEGER NOT NULL, products_array_id INTEGER DEFAULT NULL, summary VARCHAR(255) NOT NULL COLLATE BINARY, if_public BOOLEAN NOT NULL, comment_author VARCHAR(255) NOT NULL, review_date VARCHAR(255) NOT NULL, product_price INTEGER NOT NULL, retailers_list VARCHAR(255) NOT NULL, review_score INTEGER NOT NULL, PRIMARY KEY(id), CONSTRAINT FK_794381C67A1AAFFE FOREIGN KEY (products_array_id) REFERENCES product (id) NOT DEFERRABLE INITIALLY IMMEDIATE)');
+        $this->addSql('CREATE TABLE review (id INTEGER NOT NULL, products_array_id INTEGER DEFAULT NULL, summary VARCHAR(255) NOT NULL COLLATE BINARY, if_public BOOLEAN NOT NULL, comment_author VARCHAR(255) NOT NULL, review_date VARCHAR(255) NOT NULL, product_price INTEGER NOT NULL, retailers_list VARCHAR(255) NOT NULL, review_score INTEGER NOT NULL, PRIMARY KEY(id), CONSTRAINT FK_794381C67A1AAFFE FOREIGN KEY (products_array_id) REFERENCES Seafood (id) NOT DEFERRABLE INITIALLY IMMEDIATE)');
         $this->addSql('INSERT INTO review (id, products_array_id, summary, if_public) SELECT id, products_id, summary, is_public FROM __temp__review');
         $this->addSql('DROP TABLE __temp__review');
         $this->addSql('CREATE INDEX IDX_794381C67A1AAFFE ON review (products_array_id)');
