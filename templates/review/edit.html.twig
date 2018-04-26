@@ -1,14 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Review{% endblock %}
+{% block title %}Edit Review of Seafood{% endblock %}
 
 {% block body %}
 
-    <h1>Edit Review</h1>
+    <h1>Edit Seafood Review</h1>
 
     {% include 'review/_form.html.twig' with {'form': form, 'button_label': 'Edit'} only %}
 
-    <a href="{{ path('review_index') }}">back to list</a>
+    <a href="{{ path('review_index') }}">back to list of reviews</a>
 
     {% include 'review/_delete_form.html.twig' with {'identifier': review.id} only %}
 

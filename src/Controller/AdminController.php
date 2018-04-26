@@ -1,7 +1,6 @@
 <?php
 /**
- * Admin controller file
- * @package App\Controller
+ * AdminController Class
  * @author Piotr Poreba
  */
 

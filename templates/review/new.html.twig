@@ -1,11 +1,35 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Review{% endblock %}
+{% block title %}New Review for Seafood{% endblock %}
 
 {% block body %}
 
     <h1>Create new Review</h1>
 
     {% include 'review/_form.html.twig' with {'form': form} only %}
+
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        header {
+            text-align: right;
+            border-bottom: 1rem #002a80;
+            padding: 1rem;
+            background-color:#99cb84 ;
+
+        }
+        body{
+            background-color:#99cb84;
+            color: #942a25;
+
+        }
+
+
+
+
+
+    </style>
+
 
 {% endblock %}

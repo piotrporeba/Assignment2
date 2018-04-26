@@ -1,9 +1,9 @@
 <?php
 /**
- * Product Controller class
- * @package App\Controller
+ * ProductController Class
  * @author Piotr Poreba
  */
+
 namespace App\Controller;
 
 use App\Entity\Product;

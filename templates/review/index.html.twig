@@ -2,19 +2,60 @@
 
 {% block title %}Review index{% endblock %}
 
+{% block stylesheets %}
+    <style>
+        header {
+            text-align: right;
+            border-bottom: 1rem #002a80;
+            padding: 1rem;
+            background-color:#99cb84 ;
+
+        }
+        body{
+            background-color:#99cb84;
+            color: #942a25;
+            border: #942a25;
+
+        }
+        table{
+            font-family: "Eras Bold ITC";
+            color: #942a25;
+            background-color: #5bc0de;
+            padding: 10px;
+            border-width: 3px;
+            border: #942a25;
+            width: 100%;
+            text-align: center;
+
+        }
+        table, tr {
+            border: 1px #942a25;
+        }
+
+
+
+    </style>
+
+
+{% endblock %}
+
+
 {% block body %}
 
-    <h1>Review index</h1>
+
+
+
+    <h1>Seafood Reviews</h1>
     <table>
         <thead>
             <tr>
-                <th>Id</th>
-                <th>Author</th>
-                <th>Date</th>
-                <th>Summary</th>
-                <th>Retailers</th>
-                <th>Price</th>
-                <th>Score</th>
+                <th>Review Id</th>
+                <th>Review Author</th>
+                <th>Review Date</th>
+                <th>Review Summary</th>
+                <th>List of retailers Retailers</th>
+                <th>Seafood Price Paid</th>
+                <th>Seafood Score</th>
                 <th>actions</th>
             </tr>
         </thead>
@@ -30,9 +71,9 @@
                     <td>{{ review.price }}</td>
                     <td>{{ review.score }}</td>
                     <td>
-                        <a href="{{ path('review_show', {'id': review.id}) }}">show</a>
+                        <a href="{{ path('review_show', {'id': review.id}) }}">show review</a>
                         {% if review.author == app.user.username %}
-                            <a href="{{ path('review_edit', {'id': review.id}) }}">edit</a>
+                            <a href="{{ path('review_edit', {'id': review.id}) }}">edit review</a>
                         {% endif %}
                     </td>
                 </tr>
@@ -49,7 +90,7 @@
                 <td>{{ review.score }}</td>
 
                     <td>
-                        <a href="{{ path('review_show', {'id': review.id}) }}">show</a>
+                        <a href="{{ path('review_show', {'id': review.id}) }}">show review</a>
                     </td>
 
                 </tr>
@@ -57,13 +98,13 @@
 
         {% else %}
             <tr>
-                <td colspan="8">no records found</td>
+                <td colspan="8">no reviews submitted yet </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
     {% if is_granted('ROLE_USER') %}
-        <a href="{{ path('review_new') }}">Create new</a>
+        <a href="{{ path('review_new') }}">Create new review</a>
     {% endif %}
 
 {% endblock %}

@@ -1,4 +1,8 @@
 <?php
+/**
+ * ProductType Class
+ * @author Piotr Poreba
+ */
 
 namespace App\Form;
 

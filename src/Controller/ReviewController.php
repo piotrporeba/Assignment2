@@ -1,8 +1,7 @@
 <?php
 /**
- * reviewController
+ * ReviewController Class
  * @author Piotr Poreba
- * @package App\Controller
  */
 namespace App\Controller;
 

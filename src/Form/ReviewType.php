@@ -1,4 +1,8 @@
 <?php
+/**
+ * ReviewType Class
+ * @author Piotr Poreba
+ */
 
 namespace App\Form;
 

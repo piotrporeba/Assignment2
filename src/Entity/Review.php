@@ -1,6 +1,7 @@
 <?php
 /**
- * review
+ * Review Class
+ * @author Piotr Poreba
  */
 
 namespace App\Entity;
@@ -232,7 +233,4 @@ class Review
         $this->isPublic = $isPublic;
     }
 
-
-
-    // add your own fields
 }

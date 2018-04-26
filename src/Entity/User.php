@@ -1,6 +1,7 @@
 <?php
 /**
- * user class
+ * User Class
+ * @author Piotr Poreba
  */
 
 namespace App\Entity;
@@ -55,7 +56,6 @@ class User implements UserInterface, \Serializable
      */
     public function getSalt()
     {
-        // no salt needed since we are using bcrypt
         return null;
     }
 
@@ -78,8 +78,7 @@ class User implements UserInterface, \Serializable
             $this->id,
             $this->username,
             $this->password,
-            // see section on salt below
-            // $this->salt,
+
         ));
     }
 

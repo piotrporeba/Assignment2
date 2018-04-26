@@ -1,7 +1,6 @@
 <?php
 /**
- * controller file
- * @package App\Controller
+ * SecurityController Class
  * @author Piotr Poreba
  */
 
@@ -26,12 +25,10 @@ class SecurityController extends Controller
      * @param AuthenticationUtils $authUtils
      * @return \Symfony\Component\HttpFoundation\Response
      */
-    public function login(Request $request, AuthenticationUtils $authUtils) { // get the login error if there is one $error = $authUtils->getLastAuthenticationError();
+    public function login(Request $request, AuthenticationUtils $authUtils) {
 
-        // get the login error if there is one
         $error = $authUtils->getLastAuthenticationError();
 
-        // last username entered by the user
         $lastUsername = $authUtils->getLastUsername();
 
         $template = 'security/login.html.twig';

@@ -1,8 +1,7 @@
 <?php
 /**
- * product class
+ * Product class
  * @author Piotr Poreba
- * @package App\Entity
  */
 
 namespace App\Entity;
@@ -31,9 +30,8 @@ class Product
         $this->review = new ArrayCollection();
     }
 
-
     /**
-     * function get review
+     * function getreview()
      * @return mixed
      */
     public function getReview()
@@ -42,15 +40,13 @@ class Product
     }
 
     /**
-     * function set review
+     * function setreview()
      * @param mixed $review
      */
     public function setReview($review)
     {
         $this->review = $review;
     }
-
-
 
     /**
      * param id
@@ -80,14 +76,12 @@ class Product
      */
     private $price;
 
-
     /**
      * param summary
      * @ORM\Column(type="string", length=100)
      *
      */
     private $summary;
-
 
     /**
      * param photo
@@ -102,7 +96,6 @@ class Product
      *
      */
     private $ingredients;
-
 
     /**
      * param ispublic
@@ -146,8 +139,6 @@ class Product
     {
         $this->title = $title;
     }
-
-
 
     /**
      * function getDescription
@@ -257,7 +248,6 @@ class Product
         $this->isPublic = $isPublic;
     }
 
-
     /**
      * function tostring
      * @return string
@@ -268,5 +258,4 @@ class Product
 
     }
 
-    // add your own fields
 }

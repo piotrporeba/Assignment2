@@ -21,12 +21,10 @@ class LoadUsers extends Fixture
 
     public function load(ObjectManager $manager)
     {
-        // create objects
         $userUser = $this->createUser('user', 'user');
         $userAdmin = $this->createUser('admin', 'admin', ['ROLE_ADMIN']);
         $userMatt = $this->createUser('matt', 'smith', ['ROLE_SUPER_ADMIN']);
 
-        // store to DB
         $manager->persist($userUser);
         $manager->persist($userAdmin);
         $manager->persist($userMatt);
@@ -46,7 +44,6 @@ class LoadUsers extends Fixture
         $user->setUsername($username);
         $user->setRoles($roles);
 
-        // password - and encoding
         $encodedPassword = $this->encodePassword($user, $plainPassword);
         $user->setPassword($encodedPassword);
 

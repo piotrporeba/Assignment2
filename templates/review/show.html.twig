@@ -1,38 +1,77 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Review{% endblock %}
+{% block title %}Seafood Review{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        header {
+            text-align: right;
+            border-bottom: 1rem #002a80;
+            padding: 1rem;
+            background-color:#99cb84 ;
+
+        }
+        body{
+            background-color:#99cb84;
+            color: #942a25;
+            border: #942a25;
+
+        }
+        table{
+            font-family: "Eras Bold ITC";
+            color: #942a25;
+            background-color: #5bc0de;
+            padding: 10px;
+            border-width: 3px;
+            border: #942a25;
+            width: 50%;
+            text-align: center;
+            position: center;
+
+        }
+        table, tr {
+            border: 1px #942a25;
+        }
+        h1{
+            position: center;
+        }
+
+    </style>
+
+
+{% endblock %}
 
 {% block body %}
 
-    <h1>Review</h1>
+    <h1>Seafood Review</h1>
 
     <table>
         <tr>
-            <th>Id</th>
+            <th>Review Id</th>
             <td>{{ review.id }}</td>
         </tr>
         <tr>
-            <th>Author</th>
+            <th>Review Author</th>
             <td>{{ review.author }}</td>
         </tr>
         <tr>
-            <th>Date</th>
+            <th>Review Date</th>
             <td>{{ review.date }}</td>
         </tr>
         <tr>
-            <th>Summary</th>
+            <th>Review Summary</th>
             <td>{{ review.summary }}</td>
         </tr>
         <tr>
-            <th>Retailers</th>
+            <th>Retailers List</th>
             <td>{{ review.retailers }}</td>
         </tr>
         <tr>
-            <th>Price</th>
+            <th>Seafood Price Paid</th>
             <td>{{ review.price }}</td>
         </tr>
         <tr>
-            <th>Score</th>
+            <th>Seafood Score</th>
             <td>{{ review.score }}</td>
         </tr>
 
