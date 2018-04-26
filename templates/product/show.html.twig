@@ -1,43 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Product{% endblock %}
+{% block title %}Seafood{% endblock %}
 
 {% block body %}
 
-    <h1>Product</h1>
+    <h1>Seafood</h1>
 
     <table>
         <tr>
-            <th>Id</th>
+            <th>Seafood Id</th>
             <td>{{ product.id }}</td>
         </tr>
         <tr>
-            <th>Title</th>
+            <th>Seafood Title</th>
             <td>{{ product.title }}</td>
         </tr>
         <tr>
-            <th>Description</th>
+            <th>Seafood Description</th>
             <td>{{ product.description }}</td>
         </tr>
         <tr>
-            <th>Price</th>
+            <th>Seafood Price</th>
             <td>{{ product.price }}</td>
         </tr>
         <tr>
-            <th>Summary</th>
+            <th>Seafood Summary</th>
             <td>{{ product.summary }}</td>
         </tr>
         <tr>
-            <th>Photo</th>
+            <th>Seafood Photo</th>
             <td>{{ product.photo }}</td>
         </tr>
         <tr>
-            <th>Ingredients</th>
+            <th>List of Ingredients</th>
             <td>{{ product.ingredients }}</td>
         </tr>
 
         <tr>
-        <th>Reviews of this product</th>
+        <th>Reviews of this Seafood</th>
             <td> {% for review in product.review %}
                     {% if is_granted('ROLE_USER')%}
                         <a href="{{  path('review_show',{'id': review.id }) }}"> {{ review.summary }} </a>
@@ -54,8 +54,8 @@
         </tr>
     </table>
 
-    <a href="{{ path('product_index') }}">back to list</a>
-
+    <a href="{{ path('product_index') }}">back to Seafood list</a>
+<br>
     <a href="{{ path('product_edit', {'id': product.id}) }}">edit</a>
 
     {% include 'product/_delete_form.html.twig' with {'identifier': product.id} only %}

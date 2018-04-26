@@ -1,5 +1,7 @@
 <!DOCTYPE html>
 <html>
+
+
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
@@ -12,7 +14,40 @@
             }
         </style>
 
-        {% block stylesheets %}{% endblock %}
+        {% block stylesheets %}
+            <style>
+                header {
+                    text-align: right;
+                    border-bottom: 1rem #002a80;
+                    padding: 0.5rem;
+                    background-color:#99cb84 ;
+
+                }
+                body{
+                    background-color:#99cb84;
+                    color: #942a25;
+                    border: #942a25;
+
+                }
+                table{
+                    font-family: "Eras Bold ITC";
+                    color: #942a25;
+                    background-color: #5bc0de;
+                    padding: 10px;
+                    border: 5px #942a25;
+                    width: 100%;
+                    text-align: center;
+                    border-bottom: 1rem #002a80;
+                    border-top: 1rem #002a80;
+
+                }
+
+
+
+            </style>
+
+
+        {% endblock %}
     </head>
     <body>
 
