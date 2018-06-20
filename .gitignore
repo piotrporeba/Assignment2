@@ -1,6 +1,7 @@
 ###> bin folder ###
 /bin/
 bin/
+
 ###> symfony/framework-bundle ###
 .env
 /public/bundles/
